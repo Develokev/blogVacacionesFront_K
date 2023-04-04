@@ -1,0 +1,177 @@
+/** STYLE FOR ALL ++++++++++++++++++++++++++++ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: sans-serif;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.border1px {
+    border: 1px solid black;
+}
+
+.whiteLetters {
+    color:whitesmoke;
+}
+
+/*HEADERS +++++++++++++++++*/
+
+#imgLogo {
+    display: grid;
+    margin: 0 auto;
+    max-width: 50%;
+}
+
+.headerDiv {
+    background-color: black;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+/*+++++++++++++++++*/
+
+/*FOOTER +++++++++++++++++*/
+
+footer {
+    background-color: black;
+}
+
+.iconsDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footerIcons{
+    max-width: 8%;
+    height: auto;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+.footerText {
+    color:whitesmoke;
+    font-family: sans-serif;
+    font-size: 10px;
+}
+
+/*+++++++++++++++++*/
+
+/*SEARCHBAR +++++++++++++++++*/
+
+.search-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+  }
+  
+  .search-container form {
+    width: 80%;
+    display: flex;
+  }
+  
+  .search-container input {
+    width: 100%;
+    padding: 2px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .search-container button {
+    background-color: #e9aa35;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    /* cursor: pointer; */
+  }
+
+/*+++++++++++++++++*/
+
+/**GENERALS ++++++++++++++++++++++++++++++++++ */
+
+.headImgBlock {
+    background-color: white;
+    height: 120px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
+    background-image: url("../assets/Banner/1.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#img404 {
+    max-width: 45%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#goBackBtn {
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 100%;
+  
+    color: var(--dark);
+    background-color: var(--blank);
+  
+    border-radius: 5%;
+  
+    display: flex;
+    justify-content: center;
+  
+    transition: 0.5s;
+  }
+  
+  #goBackBtn:hover {
+    transform: scale(1.1);
+    background-color: rgb(233, 183, 127);
+  }
+
+/**ADMINISTRATOR VIEWS ++++++++++ */
+
+
+
+/**MEDIA QUERY +++++++++++++++++++ */
+/* ===================================
+                     media query 768px
+======================================*/
+@media screen and (min-width:768px) {
+    
+}
+/*768px end.*/
+
+/* ===================================
+                     media query 992px
+======================================*/
+@media screen and (min-width:992px) {
+
+}
+/*992px end.*/
+
+/* ===================================
+                    media query 1200px
+======================================*/
+@media screen and (min-width:1200px) {
+
+}
+/*1200px end.*/
+
+
