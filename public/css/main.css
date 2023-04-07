@@ -11,12 +11,40 @@
     text-align: center;
 }
 
+.justifyText {
+  text-align: justify;
+}
+
+.centerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .border1px {
     border: 1px solid black;
 }
 
+.margin2topbot {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.margin3topbot {
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
 .whiteLetters {
     color:whitesmoke;
+}
+
+.maxWidth30 {
+  max-width: 30%;
+}
+
+.maxWidth50 {
+  max-width: 50%;
 }
 
 /*HEADERS +++++++++++++++++*/
@@ -84,16 +112,26 @@ footer {
     border: none;
     border-radius: 5px;
     font-size: 14px;
+    border-color:#e9aa35;
   }
   
-  .search-container button {
+  .generalBtn {
     background-color: #e9aa35;
     color: white;
     border: none;
     padding: 5px;
     border-radius: 5px;
     font-size: 16px;
-    /* cursor: pointer; */
+  }
+
+  .articleBtn {
+    background-color: #3595e9;
+    color: white;
+    border: none;
+    padding: 2px;
+    border-radius: 5px;
+    font-size: 12px;
+    text-decoration: none;
   }
 
 /*+++++++++++++++++*/
@@ -145,6 +183,59 @@ footer {
     background-color: rgb(233, 183, 127);
   }
 
+/*CARDS ++++++++++ */
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    width: 80%;
+  }
+  
+  .card-image img {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .card-title {
+    margin-bottom: 10px;
+  }
+  
+  .card-subtitle {
+    margin-bottom: 20px;
+  }
+  
+  .card-text {
+    margin-bottom: 10px;
+  }
+
+/*+++++++++++++++++*/
+
+/*ART FORMS (create&update) ++++++++++ */
+
+.adminForm {
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.adminForm,
+textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #fcd898;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+/*+++++++++++++++++*/
+
 /**ADMINISTRATOR VIEWS ++++++++++ */
 
 
@@ -154,8 +245,35 @@ footer {
                      media query 768px
 ======================================*/
 @media screen and (min-width:768px) {
+    .card {
+        display: flex;
+      }
     
+      .card-image {
+        width: 40%;
+        margin-right: 20px;
+      }
+    
+      .card-title {
+        width: 60%;
+        margin-bottom: 5px;
+      }
+    
+      .card-subtitle {
+        width: 60%;
+        margin-bottom: 10px;
+      }
+    
+      .card-text {
+        width: 60%;
+        margin-bottom: 5px;
+      }
+    
+      .card-small-text {
+        width: 60%;
+      }
 }
+
 /*768px end.*/
 
 /* ===================================

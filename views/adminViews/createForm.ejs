@@ -1,0 +1,22 @@
+<%- include('./adminTemplates/headerAD.ejs') %>
+
+<main>
+    <div class="centerDiv">
+        <h3>You can now create a new article</h3>
+    </div>
+
+    <form class="adminForm" method="post" action="/admin/create">
+
+        <input type="text" name="title" id="title" placeholder="Article title" class="margin2topbot">
+
+        <input type="text" name="extract" id="extract" placeholder="Article extract - sub-title" class="margin2topbot">
+
+        <textarea name="description" id="description" name="description" cols="30" rows="30" placeholder="Write the article body here" class="margin2topbot"></textarea>
+
+        <input class="generalBtn" type="submit" value="Create Article">
+
+    </form>
+
+</main>
+
+<%- include('./adminTemplates/footerAD.ejs') %>

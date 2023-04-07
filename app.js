@@ -25,7 +25,7 @@ app.use(express.urlencoded({ extended: false }));
 
 
 //* RUTAS
-// app.use('/', require('./routers/usersRouters'));
+app.use('/', require('./routers/usersRouters'));
 app.use('/admin', require('./routers/adminRouters'));
 
 

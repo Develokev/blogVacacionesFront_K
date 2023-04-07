@@ -1,10 +1,25 @@
 const express = require('express');
 const router = express.Router();
 
-const {showDashboardAD} = require('../controllers/adminControlers')
+const {showDashboardAD, showCreateFormAD, createArticleAD, deleteArticleAD, showEditFormAD, editArticleAD} = require('../controllers/adminControlers')
 
-//Show Dashboard AD
+//*Show Dashboard AD
 router.get('/dashboard', showDashboardAD);
+
+//*Show Create Form
+router.get('/create-form', showCreateFormAD)
+
+//*Create article - Ghost
+router.post('/create', createArticleAD)
+
+//Show Update Form
+router.get('/edit-form/:id', showEditFormAD)
+
+//Update article - Ghost
+router.post('/edit/:id', editArticleAD)
+
+//*Delete article
+router.get('/delete/:id', deleteArticleAD)
 
 module.exports = router;
 

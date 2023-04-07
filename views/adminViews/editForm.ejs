@@ -1,0 +1,22 @@
+<%- include('./adminTemplates/headerAD.ejs') %>
+
+<main>
+    <div class="centerDiv">
+        <h3>You can now edit the current article</h3>
+    </div>
+
+    <form class="adminForm" method="post" action="/admin/edit/<%= results._id %>">
+
+        <input type="text" name="title" id="title" placeholder="Article title" value="<%= results.title %>" class="margin2topbot">
+
+        <input type="text" name="extract" id="extract" placeholder="Article extract" value="<%= results.extract %>" class="margin2topbot">
+
+        <textarea name="description" id="description" name="description" cols="30" rows="10" placeholder="Write the article body here" class="margin2topbot"><%= results.description %></textarea>
+
+        <input type="submit" value="Update Article" class="generalBtn">
+
+    </form>
+
+</main>
+
+<%- include('./adminTemplates/footerAD.ejs') %>
