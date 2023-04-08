@@ -18,20 +18,17 @@
 
       <% results.forEach(data => { %>
         <article class="card centerText">
+          <div class="card-image"> <!--IMAGEN-->
+            <img src="" alt="Aquí va la imagen">
+          </div>
           <div class="card-title"> <!--Titulo-->
               <h2><%= data.title %></h2>
-            </div>
-            <div class="card-subtitle"><!--fecha-->
-              <h3><%= data.date %></h3>
-            </div>
-          <div class="card-image"> <!--IMAGEN-->
-            <img src="" alt="Descripción de la imagen">
+          </div>
+          <div class="card-subtitle"><!--fecha-->
+              <h5><%= data.date %></h5>
           </div>
           <div class="card-text"> <!--extracto-->
-            <p><%= data.extract %></p>
-          </div>
-          <div class="card-small-text margin2topbot">
-            <a class="articleBtn" href="">More</a>
+              <p><%= data.extract %></p>
           </div>
           <div class="card-small-text margin3topbot">
             <a class="articleBtn margin2topbot" href="/admin/edit-form/<%= data._id %>"">Edit</a>
@@ -43,8 +40,10 @@
       <% }) %>
 
       <% } else { %>
-  
-        <p class="error-message">Ops! No articles found</p>
+        
+        <div class="centerDiv">
+          <p class="error-message centerText">Ops! No articles found</p>
+        </div>
         
         <% } %>
 

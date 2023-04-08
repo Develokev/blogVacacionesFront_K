@@ -67,16 +67,12 @@ const editArticleAD = async (req,res) => {
 
         await petition(`${(process.env.URLBASEMONGO)}${id}`, 'PUT', req.body);
 
-        const results = articles.articles
-
-        // console.log('esto es results', results)
-
     } catch (error) {
         
         console.log('FAILED editing selected article')
 
     }
-    res.redirect('/admin/dashboard')
+    return res.redirect('/admin/dashboard')
 }
 
 const deleteArticleAD = async (req,res) => {

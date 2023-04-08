@@ -1,9 +1,8 @@
 <%- include('./usersTemplates/header.ejs') %>
 
-<main >
+<main>
 
-    <h3 class="centerText">welcome to iBlogger</h3>
-    <h5 class="centerText">please check our latest posts</h5>
+    <h5 class="centerText">Search Results</h5>
 
     <%- include('./usersTemplates/userSearchBar.ejs') %>
 
@@ -11,29 +10,34 @@
         <!-- imagen de articulo -->
     </div>
 
-    <section>
-      <% if (results) { %>
+    <% if (results) { %>
 
         <% results.forEach(data => { %>
           <article class="card centerText">
             <div class="card-image"> <!--IMAGEN-->
-              <img src="" alt="Aquí va la imagen">
+                <img src="" alt="Descripción de la imagen">
             </div>
             <div class="card-title"> <!--Titulo-->
                 <h2><%= data.title %></h2>
             </div>
             <div class="card-subtitle"><!--fecha-->
                 <h5><%= data.date %></h5>
-            </div>
-            <div class="card-text"> <!--extracto-->
-                <p><%= data.extract %></p>
+            </div>    
+            <div class="card-text centerText"> <!--extracto-->
+              <p><%= data.extract %></p>
             </div>
             <div class="card-small-text margin2topbot">
               <a class="articleBtn" href="/read-more/<%= data._id %>">See more</a>
             </div>
+            <div class="card-small-text margin3topbot">
+              <a class="articleBtn margin2topbot" href="/admin/edit-form/<%= data._id %>"">Edit</a>
+            </div>
+            <div class="card-small-text margin3topbot">
+              <a class="articleBtn margin2topbot" href="/admin/delete/<%= data._id %>">Delete</a>
+            </div>
           </article>
         <% }) %>
-
+  
         <% } else { %>
     
           <div class="centerDiv">
@@ -41,8 +45,8 @@
           </div>
           
           <% } %>
-    </section>
-
+  
 </main>
+
 
 <%- include('./usersTemplates/footer.ejs') %>

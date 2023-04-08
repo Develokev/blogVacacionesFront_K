@@ -1,23 +1,33 @@
 <%- include('./usersTemplates/header.ejs') %>
 
 <main>
-    <div class="card centerText">
-        <div class="card-title"> <!--Titulo-->
-            <h2>Article title here</h2>
-        </div>
-        <div class="card-subtitle"><!--fecha-->
-            <h3>date here</h3>
-        </div>
-        <div class="card-image border1px"> <!--IMAGEN-->
-        <img src="" alt="Descripción de la imagen">
-        </div>
-        <div class="card-text border1px"> <!--extracto-->
-        <p class="justifyText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae diam quis diam porta tristique nec ut justo. Vivamus vitae hendrerit lorem. Morbi rutrum at velit ac commodo. Phasellus in mauris nec sem blandit ornare. Morbi tristique sodales mattis. Maecenas aliquam nunc et velit pulvinar, ut mollis ante feugiat. Curabitur vel libero ac lacus elementum elementum eget ut lacus. Etiam vitae interdum ante. Vestibulum orci metus, mollis eget dapibus sit amet, hendrerit vitae orci.</p>
-        </div>
-        <div class="card-small-text">
-        <a class="generalBtn" href="">Back</a>
-        </div>
+
+    <div>
+        <h5 class="centerText">Detailed view of <strong> <%= results.title %> </strong></h5>
     </div>
+
+    <section>  
+        <article class="card centerText">
+            <div class="card-image"> <!--IMAGEN-->
+                <img src="" alt="Aquí va la imagen">
+                </div>
+            <div class="card-title"> <!--Titulo-->
+                <h2><%= results.title %></h2>
+            </div>
+            <div class="card-subtitle"><!--fecha-->
+                <h5><%= results.date %></h5>
+            </div>
+            <div class="card-text"> <!--extracto-->
+                <p><%= results.extract %></p>
+            </div>
+            <div class="card-text justifyText"> <!--Descripción de artículo-->
+                <p><%= results.description %></p>
+            </div>
+            <div class="centerText">
+                <a id="goBackBtn" href="/">Back</a>
+            </div>
+        </article>
+    </section>
 
 </main>
 

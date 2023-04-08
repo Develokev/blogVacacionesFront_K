@@ -1,12 +1,15 @@
 const express = require('express');
 const router = express.Router();
 
-const { showIndex, showMore } = require('../controllers/usersControllers')
+const { showIndex, showMore, showSearchResults } = require('../controllers/usersControllers')
 
-//*Index
+//*Show Index Fetch + render
 router.get('/', showIndex);
 
-//*readMore
-router.get('/read-more', showMore);
+//*Show readMore - Fetch + render
+router.get('/read-more/:id', showMore);
+
+//Show searchResults + Search BTN function
+router.get('/search-results', showSearchResults);
 
 module.exports = router;
