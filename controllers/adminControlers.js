@@ -36,8 +36,6 @@ const createArticleAD = async (req,res) => {
         const resp = await petition(`${(process.env.URLBASEMONGO)}`, 'POST', req.body);
 
         res.redirect('/admin/dashboard')
-        
-        // return resp;
 
     } catch (error) {
         
@@ -67,11 +65,9 @@ const editArticleAD = async (req,res) => {
     try {
         const id = req.params.id
 
-        await petition(`${(process.env.URLBASEMONGO)}${id}`, 'POST', req.body);
+        await petition(`${(process.env.URLBASEMONGO)}${id}`, 'PUT', req.body);
 
         const results = articles.articles
-
-        res.redirect('/admin/dashboard')
 
         // console.log('esto es results', results)
 
@@ -80,6 +76,7 @@ const editArticleAD = async (req,res) => {
         console.log('FAILED editing selected article')
 
     }
+    res.redirect('/admin/dashboard')
 }
 
 const deleteArticleAD = async (req,res) => {

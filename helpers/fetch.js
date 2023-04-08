@@ -1,7 +1,7 @@
 //*FETCH
 const petition = async (url, method, body = {}) => {
     let options = {};
-    console.log(url)
+    console.log('esta es la url que llega al fetch', url)
     const data = { ...body }
     
     
@@ -22,7 +22,7 @@ const petition = async (url, method, body = {}) => {
             }
         }
 
-
+        // console.log('esto es options', options)
         let respuesta = await fetch(url, options);
 
         let resp = await respuesta.json();

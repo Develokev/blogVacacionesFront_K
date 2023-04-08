@@ -7,19 +7,19 @@ const {showDashboardAD, showCreateFormAD, createArticleAD, deleteArticleAD, show
 router.get('/dashboard', showDashboardAD);
 
 //*Show Create Form
-router.get('/create-form', showCreateFormAD)
+router.get('/create-form', showCreateFormAD);
 
 //*Create article - Ghost
-router.post('/create', createArticleAD)
+router.post('/create', createArticleAD);
 
-//Show Update Form
-router.get('/edit-form/:id', showEditFormAD)
+//*Show Update Form
+router.get('/edit-form/:id', showEditFormAD);
 
-//Update article - Ghost
-router.post('/edit/:id', editArticleAD)
+//*Update article - Ghost
+router.post('/edit/:id', editArticleAD);
 
 //*Delete article
-router.get('/delete/:id', deleteArticleAD)
+router.get('/delete/:id', deleteArticleAD);
 
 module.exports = router;
 
