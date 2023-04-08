@@ -5,11 +5,15 @@
         <h3>You can now edit the current article</h3>
     </div>
 
-    <form class="adminForm" method="post" action="/admin/edit/<%= results._id %>">
+    <form class="adminForm" method="post" action="/admin/edit/<%= results._id %>" enctype="multipart/form-data">
 
         <input type="text" name="title" id="title" placeholder="Article title" value="<%= results.title %>" class="margin2topbot">
 
         <input type="text" name="extract" id="extract" placeholder="Article extract" value="<%= results.extract %>" class="margin2topbot">
+
+        <input type="file" name="file" id="file">
+
+        <input name="photo" type="hidden">
 
         <textarea name="description" id="description" name="description" cols="30" rows="10" placeholder="Write the article body here" class="margin2topbot"><%= results.description %></textarea>
 

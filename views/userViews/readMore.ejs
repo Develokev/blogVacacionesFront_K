@@ -1,4 +1,5 @@
 <%- include('./usersTemplates/header.ejs') %>
+<%- include('./usersTemplates/navBarUsers.ejs') %>
 
 <main>
 
@@ -9,12 +10,12 @@
     <section>  
         <article class="card centerText">
             <div class="card-image"> <!--IMAGEN-->
-                <img src="" alt="Aquí va la imagen">
+                <img src="<%= results.photo %>" alt="Aquí va la imagen">
                 </div>
             <div class="card-title"> <!--Titulo-->
                 <h2><%= results.title %></h2>
             </div>
-            <div class="card-subtitle"><!--fecha-->
+            <div class="card-date"><!--fecha-->
                 <h5><%= results.date %></h5>
             </div>
             <div class="card-text"> <!--extracto-->

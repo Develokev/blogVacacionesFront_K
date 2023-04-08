@@ -1,10 +1,10 @@
 <%- include('./adminTemplates/headerAD.ejs') %>
-
+<%- include('./adminTemplates/navBarAdmin.ejs') %>
 <main >
 
     <h5 class="centerText">Here you can edit content</h5>
 
-    <%- include('./adminTemplates/searchBar.ejs') %>
+    <%- include('./adminTemplates/adminSearchBar.ejs') %>
 
     <div class="headImgBlock">
         <!-- imagen de articulo -->
@@ -19,12 +19,12 @@
       <% results.forEach(data => { %>
         <article class="card centerText">
           <div class="card-image"> <!--IMAGEN-->
-            <img src="" alt="Aquí va la imagen">
+            <img src="<%= data.photo %>" alt="Aquí va la imagen">
           </div>
           <div class="card-title"> <!--Titulo-->
               <h2><%= data.title %></h2>
           </div>
-          <div class="card-subtitle"><!--fecha-->
+          <div class="card-date"><!--fecha-->
               <h5><%= data.date %></h5>
           </div>
           <div class="card-text"> <!--extracto-->

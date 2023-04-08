@@ -37,7 +37,7 @@ const showMore = async (req,res) => {
 
 }}
 
-//Search Results View - Sending QUERY to URL + Render
+//*Search Results View - Sending QUERY to URL + Render
 const showSearchResults = async (req,res) => {
     
     try {
@@ -45,10 +45,8 @@ const showSearchResults = async (req,res) => {
         const articles = await petition(`${(process.env.URLBASEMONGO)}search/?search=${req.query.search}`, "GET", req.body)
 
         const results = articles.articles
-
-        console.log(results)
     
-        res.render('./userViews/searchResults', {results})
+        res.render('./userViews/userSearchResults', {results})
 
     } catch (error) {
         
@@ -57,8 +55,23 @@ const showSearchResults = async (req,res) => {
     }
 }
 
+//Login View - RENDER
+const showLoginForm = async (req,res) => {
+
+    try {
+        
+        res.render('./userViews/login')
+
+    } catch (error) {
+        
+        console.log('FAILED rendering Login Form')
+
+    }
+}
+
 module.exports = {
     showIndex,
     showMore,
     showSearchResults,
+    showLoginForm,
 }

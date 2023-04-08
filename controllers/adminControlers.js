@@ -32,7 +32,10 @@ const showCreateFormAD = async (req,res) => {
 //!Create article - Ghost
 const createArticleAD = async (req,res) => {
 
+        req.body.photo = `http://localhost:3014/multerPhotos/${req.file.filename}`
+
     try {
+
         const resp = await petition(`${(process.env.URLBASEMONGO)}`, 'POST', req.body);
 
         res.redirect('/admin/dashboard')
@@ -61,6 +64,8 @@ const showEditFormAD = async (req,res) => {
 
 //!EDIT article - Ghost
 const editArticleAD = async (req,res) => {
+
+    req.body.photo = `http://localhost:3014/multerPhotos/${req.file.filename}`
 
     try {
         const id = req.params.id
