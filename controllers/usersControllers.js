@@ -55,7 +55,7 @@ const showSearchResults = async (req,res) => {
     }
 }
 
-//Login View - RENDER
+//*Login View - RENDER
 const showLoginForm = async (req,res) => {
 
     try {
@@ -69,9 +69,31 @@ const showLoginForm = async (req,res) => {
     }
 }
 
+const loginCheck = async (req,res) => {
+
+    try {
+        
+        const respuesta = await petition(`${process.env.URLBASEMONGO}admin/login`, "POST", req.body)
+        console.log('respuesta del login access:', respuesta)
+
+        if(respuesta.ok){
+    
+            res.redirect('/admin/dashboard')
+
+        } else {
+            console.log('Email/Password incorrect')
+        }
+
+    } catch (error) {
+        
+        console.log('FAILED checking credentials')
+    }
+}
+
 module.exports = {
     showIndex,
     showMore,
     showSearchResults,
     showLoginForm,
+    loginCheck
 }
