@@ -293,31 +293,35 @@ textarea {
 ======================================*/
 @media screen and (min-width:768px) {
     .card {
-        display: flex;
+        display: grid;
       }
     
       .card-image {
-        width: 40%;
+        width: 100%;
         margin-right: 20px;
       }
     
       .card-title {
-        width: 60%;
+        width: 100%;
         margin-bottom: 5px;
+        text-align: center;
       }
     
       .card-subtitle {
-        width: 60%;
+        width: 100%;
         margin-bottom: 10px;
+        text-align: center;
       }
     
       .card-text {
-        width: 60%;
+        width: 100%;
         margin-bottom: 5px;
+        text-align: center;
       }
     
       .card-small-text {
-        width: 60%;
+        width: 100%;
+        text-align: center;
       }
 }
 
@@ -328,6 +332,22 @@ textarea {
 ======================================*/
 @media screen and (min-width:992px) {
 
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-content: space-around;
+  }
+
+  .card {
+    display:grid;
+  }
+  
+  .card-image {
+    width: 100%;
+    /* margin-right: 20px; */
+  }
+
 }
 /*992px end.*/
 
@@ -336,6 +356,21 @@ textarea {
 ======================================*/
 @media screen and (min-width:1200px) {
 
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-content: space-around;
+  }
+
+  .card {
+    display:grid;
+  }
+
+  .card-image {
+    width: 100%;
+    /* margin-right: 20px; */
+  }
 }
 /*1200px end.*/
 

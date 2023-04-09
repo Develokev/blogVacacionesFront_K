@@ -4,8 +4,6 @@
 
     <h5 class="centerText">Here you can edit content</h5>
 
-    <%- include('./adminTemplates/adminSearchBar.ejs') %>
-
     <div class="headImgBlock">
         <!-- imagen de articulo -->
     </div>
@@ -13,40 +11,41 @@
     <div class="centerDiv">
       <a href="/admin/create-form" class="generalBtn maxWidth50">Create new article</a>
     </div>
+    
+    <section>
+      <% if (results) { %>
 
-    <% if (results) { %>
+        <% results.forEach(data => { %>
+          <article class="card centerText">
+            <div class="card-image"> <!--IMAGEN-->
+              <img src="<%= data.photo %>" alt="Aquí va la imagen">
+            </div>
+            <div class="card-title"> <!--Titulo-->
+                <h2><%= data.title %></h2>
+            </div>
+            <div class="card-date"><!--fecha-->
+                <h5><%= data.date %></h5>
+            </div>
+            <div class="card-text"> <!--extracto-->
+                <p><%= data.extract %></p>
+            </div>
+            <div class="card-small-text margin3topbot">
+              <a class="articleBtn margin2topbot" href="/admin/edit-form/<%= data._id %>"">Edit</a>
+            </div>
+            <div class="card-small-text margin3topbot">
+              <a class="articleBtn margin2topbot" href="/admin/delete/<%= data._id %>">Delete</a>
+            </div>
+          </article>
+        <% }) %>
 
-      <% results.forEach(data => { %>
-        <article class="card centerText">
-          <div class="card-image"> <!--IMAGEN-->
-            <img src="<%= data.photo %>" alt="Aquí va la imagen">
+        <% } else { %>
+          
+          <div class="centerDiv">
+            <p class="error-message centerText">Ops! No articles found</p>
           </div>
-          <div class="card-title"> <!--Titulo-->
-              <h2><%= data.title %></h2>
-          </div>
-          <div class="card-date"><!--fecha-->
-              <h5><%= data.date %></h5>
-          </div>
-          <div class="card-text"> <!--extracto-->
-              <p><%= data.extract %></p>
-          </div>
-          <div class="card-small-text margin3topbot">
-            <a class="articleBtn margin2topbot" href="/admin/edit-form/<%= data._id %>"">Edit</a>
-          </div>
-          <div class="card-small-text margin3topbot">
-            <a class="articleBtn margin2topbot" href="/admin/delete/<%= data._id %>">Delete</a>
-          </div>
-        </article>
-      <% }) %>
-
-      <% } else { %>
-        
-        <div class="centerDiv">
-          <p class="error-message centerText">Ops! No articles found</p>
-        </div>
-        
-        <% } %>
-
+          
+          <% } %>
+    </section>
 </main>
 
 <%- include('./adminTemplates/footerAD.ejs') %>
