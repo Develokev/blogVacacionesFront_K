@@ -22,7 +22,7 @@
                   <h2><%= data.title %></h2>
               </div>
               <div class="card-date"><!--fecha-->
-                  <h5><%= data.date %></h5>
+                  <h5><%= data.date.toString().substring(0, 10) %></h5>
               </div>    
               <div class="card-text centerText"> <!--extracto-->
                 <p><%= data.extract %></p>
