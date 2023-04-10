@@ -1,7 +1,7 @@
 //*Requiring Fetch
 const {petition} = require('../helpers/fetch');
 
-//*Dashboard - GET + RENDER
+//*Dashboard - GET + RENDER   --> OPERATIVE
 const showDashboardAD = async (req,res) => {
 
     try {
@@ -17,7 +17,7 @@ const showDashboardAD = async (req,res) => {
         console.log(error, 'Failed rendering Dashboard')
 }}
 
-//*Create Form - RENDER
+//*Create Form - RENDER     --> OPERATIVE
 const showCreateFormAD = async (req,res) => {
 
     try {
@@ -29,7 +29,7 @@ const showCreateFormAD = async (req,res) => {
         console.log(error, 'FAILED rendering create form')
 }}
 
-//!Create article - Ghost
+//!Create article - Ghost   --> OPERATIVE
 const createArticleAD = async (req,res) => {
 
         req.body.photo = `http://localhost:3014/multerPhotos/${req.file.filename}`
@@ -45,7 +45,7 @@ const createArticleAD = async (req,res) => {
         console.log(error, 'FAILED creating new article')
 }}
 
-//*EDIT Form - RENDER
+//*EDIT Form - RENDER   --> OPERATIVE
 const showEditFormAD = async (req,res) => {
 
     try {
@@ -62,7 +62,7 @@ const showEditFormAD = async (req,res) => {
         console.log(error, 'FAILED rendering edit form')
 }}
 
-//!EDIT article - Ghost
+//!EDIT article - Ghost     --> OPERATIVE
 const editArticleAD = async (req,res) => {
 
     req.body.photo = `http://localhost:3014/multerPhotos/${req.file.filename}`
@@ -80,6 +80,7 @@ const editArticleAD = async (req,res) => {
     return res.redirect('/admin/dashboard')
 }
 
+//*Delete Article --> OPERATIVE
 const deleteArticleAD = async (req,res) => {
     
     try {

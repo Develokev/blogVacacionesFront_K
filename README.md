@@ -4,7 +4,7 @@
 Luego de hacer el pull de ambos repositorios, se deben añadir a cada uno un archivo **".ENV"** a primer nivel que contenga la siguiente información.
 
 + ENV:
-+ **PORT = 3004**
++ **PORT = 3014**
 
 + URI_CONNECT =mongodb+srv://admin:admin@develokev.gl0pbua.mongodb.net/blog?retryWrites=true&w=majority
 

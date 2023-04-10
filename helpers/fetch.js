@@ -3,12 +3,7 @@ const petition = async (url, method, body = {}) => {
     let options = {};
     console.log('esta es la url que llega al fetch', url)
     const data = { ...body }
-    
-    
-    // if (data.title) {
-    //     const titleSpaced = data.title.replaceAll("_", " ")
-    //     data.title = titleSpaced.toLowerCase()
-    // }
+
 
     try {
         if (method == "POST" || method == "PUT" || method == "DELETE") {
